@@ -1,0 +1,55 @@
+{
+  "identifier": "DELETE",
+  "controlType": "SECTION",
+  "conditionals": {
+    "show": "{{actionConfiguration.formData.command.data === 'DELETE'}}"
+  },
+  "children": [
+    {
+      "controlType": "SECTION",
+      "label": "Select Collection to Query",
+      "children": [
+        {
+          "label": "Collection",
+          "configProperty": "actionConfiguration.formData.collection.data",
+          "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
+          "evaluationSubstitutionType": "TEMPLATE"
+        }
+      ]
+    },
+    {
+      "controlType": "SECTION",
+      "label": "Query",
+      "description": "Optional",
+      "children": [
+        {
+          "label": "Query",
+          "configProperty": "actionConfiguration.formData.delete.query.data",
+          "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
+          "inputType": "JSON",
+          "evaluationSubstitutionType": "TEMPLATE",
+          "placeholderText": "{rating : {$gte : 9}}"
+        },
+        {
+          "label": "Limit",
+          "configProperty": "actionConfiguration.formData.delete.limit.data",
+          "controlType": "DROP_DOWN",
+          "-subtitle": "Allowed values: SINGLE, ALL",
+          "-tooltipText": "Allowed values: SINGLE, ALL",
+          "-alternateViewTypes": ["json"],
+          "initialValue": "SINGLE",
+          "options": [
+            {
+              "label": "Single Document",
+              "value": "SINGLE"
+            },
+            {
+              "label": "All Matching Documents",
+              "value": "ALL"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
