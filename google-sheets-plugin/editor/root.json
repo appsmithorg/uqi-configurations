@@ -116,10 +116,5 @@
       ]
     }
   ],
-  "files": [
-    "uqi_nikhil/insert.json",
-    "uqi_nikhil/delete.json",
-    "uqi_nikhil/fetch_many.json",
-    "uqi_nikhil/update.json"
-  ]
+  "files": ["insert.json", "delete.json", "fetch_many.json", "update.json"]
 }
