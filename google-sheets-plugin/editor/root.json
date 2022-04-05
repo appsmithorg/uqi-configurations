@@ -55,23 +55,27 @@
           "configProperty": "actionConfiguration.formData.entityType.data",
           "controlType": "DROP_DOWN",
           "initialValue": "ROWS",
-          "conditionals": {
-            "validValues": "{{ ['SPREADSHEET', 'SHEET', 'ROWS'].filter((val) => { return { 'SPREADSHEET': ['FETCH_DETAILS', 'FETCH_MANY', 'INSERT_ONE', 'DELETE_ONE'], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY_ONE', 'INSERT_MANY', 'UPDATE_ONE'] }[val].includes(actionConfiguration.formData.command.data) }) }}"
-          },
           "options": [
             {
+              "disabled": "{{ ['UPDATE_ONE', 'INSERT_MANY', 'UPDATE_MANY', 'DELETE_MANY'].includes(actionConfiguration.formData.command.data) }}",
               "label": "Spreadsheet",
               "value": "SPREADSHEET"
             },
             {
+              "disabled": "{{ ['FETCH_DETAILS', 'INSERT_ONE', 'UPDATE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY', 'DELETE_MANY'].includes(actionConfiguration.formData.command.data) }}",
               "label": "Sheet",
               "value": "SHEET"
             },
             {
+              "disabled": "{{ ['DELETE_MANY'].includes(actionConfiguration.formData.command.data) }}",
               "label": "Sheet Row(s)",
               "value": "ROWS"
             }
-          ]
+          ],
+          "evaluateFormConfig": {
+            "condition": "{{true}}",
+            "paths": ["options"]
+          }
         },
         {
           "label": "",
