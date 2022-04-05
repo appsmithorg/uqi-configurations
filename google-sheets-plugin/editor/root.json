@@ -72,9 +72,13 @@
               "value": "ROWS"
             }
           ],
-          "evaluateFormConfig": {
-            "condition": "{{true}}",
-            "paths": ["options"]
+          "conditionals": {
+            "evaluateFormConfig": {
+              "condition": "{{true}}",
+              "paths": [
+                "options"
+              ]
+            }
           }
         },
         {
@@ -120,5 +124,10 @@
       ]
     }
   ],
-  "files": ["insert.json", "delete.json", "fetch_many.json", "update.json"]
+  "files": [
+    "insert.json",
+    "delete.json",
+    "fetch_many.json",
+    "update.json"
+  ]
 }
