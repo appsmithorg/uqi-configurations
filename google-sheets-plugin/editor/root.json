@@ -94,6 +94,7 @@
               "configProperty": "actionConfiguration.formData.sheetUrl.data",
               "controlType": "DROP_DOWN",
               "-placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
+              "alternateViewTypes": ["json"],
               "conditionals": {
                 "fetchDynamicValues": {
                   "condition": "{{true}}",
@@ -112,9 +113,9 @@
               "tooltipText": "The name of the sheet inside the spreadsheet",
               "configProperty": "actionConfiguration.formData.sheetName.data",
               "controlType": "DROP_DOWN",
-              "initialValue": "Sheet1",
+              "alternateViewTypes": ["json"],
               "conditionals": {
-                "show": "{{ !!actionConfiguration.formData.sheetUrl.data }}",
+                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) && !!actionConfiguration.formData.sheetUrl.data }}",
                 "fetchDynamicValues": {
                   "condition": "{{ !!actionConfiguration.formData.sheetUrl.data }}",
                   "config": {
@@ -137,7 +138,7 @@
               "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
               "initialValue": "1",
               "conditionals": {
-                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': [], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data)  }}"
+                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': [], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) && actionConfiguration.formData.sheetName.data }}"
               }
             }
           ]
