@@ -75,9 +75,7 @@
           "conditionals": {
             "evaluateFormConfig": {
               "condition": "{{true}}",
-              "paths": [
-                "options"
-              ]
+              "paths": ["options"]
             }
           }
         },
@@ -95,7 +93,18 @@
               "propertyName": "rows_get_spreadsheetUrl",
               "configProperty": "actionConfiguration.formData.sheetUrl.data",
               "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
-              "placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0"
+              "placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
+              "conditionals": {
+                "fetchDynamicValues": {
+                  "condition": "{{true}}",
+                  "config": {
+                    "params": {
+                      "requestType": "SPREADSHEET_SELECTOR",
+                      "displayType": "DROPDOWN"
+                    }
+                  }
+                }
+              }
             },
             {
               "label": "Sheet Name",
@@ -105,7 +114,19 @@
               "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
               "initialValue": "Sheet1",
               "conditionals": {
-                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data)  }}"
+                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data)  }}",
+                "fetchDynamicValues": {
+                  "condition": "{{!!actionConfiguration.formData.sheetUrl.data}}",
+                  "config": {
+                    "params": {
+                      "requestType": "SHEET_SELECTOR",
+                      "displayType": "DROPDOWN",
+                      "parameters": {
+                        "sheetUrl": "{{actionConfiguration.formData.sheetUrl.data}}"
+                      }
+                    }
+                  }
+                }
               }
             },
             {
@@ -124,10 +145,5 @@
       ]
     }
   ],
-  "files": [
-    "insert.json",
-    "delete.json",
-    "fetch_many.json",
-    "update.json"
-  ]
+  "files": ["insert.json", "delete.json", "fetch_many.json", "update.json"]
 }
