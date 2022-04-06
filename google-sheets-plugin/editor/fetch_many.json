@@ -14,10 +14,8 @@
       "initialValue": [],
       "options": [],
       "placeholderText": "0",
-      "fetchOptionsCondtionally": true,
-      "alternateViewTypes": [
-        "json"
-      ],
+      "fetchOptionsConditionally": true,
+      "alternateViewTypes": ["json"],
       "conditionals": {
         "enable": "{{!!actionConfiguration.formData.sheetUrl.data && !!actionConfiguration.formData.sheetName.data}}",
         "fetchDynamicValues": {
@@ -125,9 +123,7 @@
               "value": "NOT_IN"
             }
           ],
-          "alternateViewTypes": [
-            "json"
-          ]
+          "alternateViewTypes": ["json"]
         },
         {
           "label": "Sort By",
@@ -136,9 +132,7 @@
           "controlType": "SORTING",
           "-subtitle": "Array of Objects",
           "-tooltipText": "Array of Objects",
-          "alternateViewTypes": [
-            "json"
-          ]
+          "alternateViewTypes": ["json"]
         },
         {
           "label": "",

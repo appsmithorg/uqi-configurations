@@ -94,6 +94,7 @@
               "configProperty": "actionConfiguration.formData.sheetUrl.data",
               "controlType": "DROP_DOWN",
               "-placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
+              "fetchOptionsConditionally": true,
               "alternateViewTypes": ["json"],
               "conditionals": {
                 "fetchDynamicValues": {
@@ -113,6 +114,7 @@
               "tooltipText": "The name of the sheet inside the spreadsheet",
               "configProperty": "actionConfiguration.formData.sheetName.data",
               "controlType": "DROP_DOWN",
+              "fetchOptionsConditionally": true,
               "alternateViewTypes": ["json"],
               "conditionals": {
                 "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) && !!actionConfiguration.formData.sheetUrl.data }}",
