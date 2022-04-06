@@ -93,7 +93,7 @@
               "propertyName": "rows_get_spreadsheetUrl",
               "configProperty": "actionConfiguration.formData.sheetUrl.data",
               "controlType": "DROP_DOWN",
-              "placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
+              "-placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
               "conditionals": {
                 "fetchDynamicValues": {
                   "condition": "{{true}}",
@@ -114,9 +114,9 @@
               "controlType": "DROP_DOWN",
               "initialValue": "Sheet1",
               "conditionals": {
-                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data)  }}",
+                "show": "{{ !!actionConfiguration.formData.sheetUrl.data }}",
                 "fetchDynamicValues": {
-                  "condition": "{{!!actionConfiguration.formData.sheetUrl.data}}",
+                  "condition": "{{ !!actionConfiguration.formData.sheetUrl.data }}",
                   "config": {
                     "params": {
                       "requestType": "SHEET_SELECTOR",
