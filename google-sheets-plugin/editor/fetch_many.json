@@ -19,9 +19,9 @@
         "json"
       ],
       "conditionals": {
-        "enable": "{{!actionConfiguration.formData.sheetUrl.data && !actionConfiguration.formData.sheetName.data}}",
+        "enable": "{{!!actionConfiguration.formData.sheetUrl.data && !!actionConfiguration.formData.sheetName.data}}",
         "fetchDynamicValues": {
-          "condition": "{{!actionConfiguration.formData.sheetUrl.data && !actionConfiguration.formData.sheetName.data}}",
+          "condition": "{{!!actionConfiguration.formData.sheetUrl.data && !!actionConfiguration.formData.sheetName.data}}",
           "config": {
             "params": {
               "requestType": "COLUMNS_SELECTOR",
