@@ -81,7 +81,7 @@
         },
         {
           "label": "",
-          "configProperty": "actionConfiguration.formData.insert.selector.data",
+          "configProperty": "actionConfiguration.formData.selector.data",
           "controlType": "ENTITY_SELECTOR",
           "conditionals": {
             "show": "{{ new Object({ 'SPREADSHEET': ['FETCH_DETAILS', 'DELETE_ONE'], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) }}"
@@ -92,7 +92,7 @@
               "tooltipText": "The URL of the spreadsheet in your Google Drive",
               "propertyName": "rows_get_spreadsheetUrl",
               "configProperty": "actionConfiguration.formData.sheetUrl.data",
-              "controlType": "DROPDOWN",
+              "controlType": "DROP_DOWN",
               "placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
               "conditionals": {
                 "fetchDynamicValues": {
@@ -111,7 +111,7 @@
               "propertyName": "rows_get_sheetName",
               "tooltipText": "The name of the sheet inside the spreadsheet",
               "configProperty": "actionConfiguration.formData.sheetName.data",
-              "controlType": "DROPDOWN",
+              "controlType": "DROP_DOWN",
               "initialValue": "Sheet1",
               "conditionals": {
                 "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data)  }}",
