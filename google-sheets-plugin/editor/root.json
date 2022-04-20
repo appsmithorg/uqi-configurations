@@ -120,7 +120,7 @@
                 "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) && !!actionConfiguration.formData.sheetUrl.data }}",
                 "fetchDynamicValues": {
                   "condition": "{{ !!actionConfiguration.formData.sheetUrl.data }}",
-                  "dynamicDependencyPathList": ["actionConfiguration.formData.sheetUrl.data"],
+                  "dynamicDependencyPathList": ["actionConfiguration.formData.sheetUrl.data", "actionConfiguration.formData.tableHeaderIndex.data"],
                   "config": {
                     "params": {
                       "requestType": "SHEET_SELECTOR",
