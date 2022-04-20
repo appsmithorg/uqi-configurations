@@ -20,6 +20,7 @@
         "enable": "{{!!actionConfiguration.formData.sheetUrl.data && !!actionConfiguration.formData.sheetName.data}}",
         "fetchDynamicValues": {
           "condition": "{{!!actionConfiguration.formData.sheetUrl.data && !!actionConfiguration.formData.sheetName.data}}",
+          "dynamicDependencyPathList": ["actionConfiguration.formData.sheetUrl.data", "actionConfiguration.formData.sheetName.data", "actionConfiguration.formData.tableHeaderIndex.data"],
           "config": {
             "params": {
               "requestType": "COLUMNS_SELECTOR",
