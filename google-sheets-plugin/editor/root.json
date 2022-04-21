@@ -99,6 +99,7 @@
               "conditionals": {
                 "fetchDynamicValues": {
                   "condition": "{{true}}",
+                  "dynamicDependencyPathList": ["actionConfiguration.formData.sheetUrl.data"],
                   "config": {
                     "params": {
                       "requestType": "SPREADSHEET_SELECTOR",
