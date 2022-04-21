@@ -24,7 +24,7 @@
           "config": {
             "params": {
               "requestType": "COLUMNS_SELECTOR",
-              "displayType": "DROPDOWN",
+              "displayType": "DROP_DOWN",
               "parameters": {
                 "sheetUrl": "{{actionConfiguration.formData.sheetUrl.data}}",
                 "sheetName": "{{actionConfiguration.formData.sheetName.data}}"

@@ -103,7 +103,7 @@
                   "config": {
                     "params": {
                       "requestType": "SPREADSHEET_SELECTOR",
-                      "displayType": "DROPDOWN"
+                      "displayType": "DROP_DOWN"
                     }
                   }
                 }
@@ -125,7 +125,7 @@
                   "config": {
                     "params": {
                       "requestType": "SHEET_SELECTOR",
-                      "displayType": "DROPDOWN",
+                      "displayType": "DROP_DOWN",
                       "parameters": {
                         "sheetUrl": "{{actionConfiguration.formData.sheetUrl.data}}"
                       }
