@@ -14,7 +14,7 @@
       "initialValue": [],
       "options": [],
       "placeholderText": "0",
-      "fetchOptionsCondtionally": true,
+      "fetchOptionsConditionally": true,
       "alternateViewTypes": ["json"],
       "conditionals": {
         "enable": "{{!!actionConfiguration.formData.sheetUrl.data && !!actionConfiguration.formData.sheetName.data}}",
