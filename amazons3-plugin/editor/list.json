@@ -90,7 +90,8 @@
               "label": "No",
               "value": "NO"
             }
-          ]
+          ],
+          "staticDependencyPathList": ["actionConfiguration.formData.list.expiry.data"]
         },
         {
           "label": "Expiry Duration of Signed URL (Minutes)",
@@ -99,8 +100,7 @@
           "initialValue": "5",
           "conditionals": {
             "show": "{{actionConfiguration.formData.signedUrl.data === 'YES'}}"
-          },
-          "staticDependencyPathList": ["actionConfiguration.formData.signedUrl.data"]
+          }
         },
         {
           "label": "Generate Un-signed URL",
