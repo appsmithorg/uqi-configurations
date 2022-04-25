@@ -99,7 +99,8 @@
           "initialValue": "5",
           "conditionals": {
             "show": "{{actionConfiguration.formData.signedUrl.data === 'YES'}}"
-          }
+          },
+          "staticDependencyPathList": ["actionConfiguration.formData.signedUrl.data"]
         },
         {
           "label": "Generate Un-signed URL",
