@@ -141,7 +141,7 @@
               "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
               "initialValue": "1",
               "conditionals": {
-                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': [], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) && !!actionConfiguration.formData.sheetName.data }}"
+                "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': [], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) && actionConfiguration.formData.sheetName.data }}"
               }
             }
           ]
