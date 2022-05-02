@@ -57,7 +57,7 @@
           "initialValue": "ROWS",
           "options": [
             {
-              "disabled": "{{ ['FETCH_DETAILS', 'INSERT_ONE', 'DELETE_ONE'].includes(actionConfiguration.formData.command.data) === false }}",
+              "disabled": "{{ ['FETCH_MANY', 'FETCH_DETAILS', 'INSERT_ONE', 'DELETE_ONE'].includes(actionConfiguration.formData.command.data) === false }}",
               "label": "Spreadsheet",
               "value": "SPREADSHEET"
             },
