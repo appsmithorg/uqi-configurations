@@ -148,7 +148,7 @@
             "limit": "20",
             "offset": "0"
           },
-          "-tooltipText": {
+          "tooltipText": {
             "limit": "Fetch only the rows that can be displayed to improve performance with pagination",
             "offset": "Skip the rows before the start of the current page"
           }
