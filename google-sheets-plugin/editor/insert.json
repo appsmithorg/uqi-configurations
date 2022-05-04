@@ -32,7 +32,7 @@
           "controlType": "QUERY_DYNAMIC_TEXT",
           "evaluationSubstitutionType": "SMART_SUBSTITUTE",
           "conditionals": {
-            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.command.data === 'INSERT_ONE'}}"
+            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'INSERT_ONE'}}"
           },
           "placeholderText": "{\n  name: {{nameInput.text}},\n  dob: {{dobPicker.formattedDate}},\n  gender: {{genderSelect.selectedOptionValue}} }\n }"
         },
