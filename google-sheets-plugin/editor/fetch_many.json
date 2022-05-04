@@ -13,7 +13,7 @@
       "controlType": "PROJECTION",
       "initialValue": [],
       "options": [],
-      "placeholderText": "All columns will be fetched",
+      "placeholderText": "All columns will be fetched.",
       "fetchOptionsConditionally": true,
       "alternateViewTypes": ["json"],
       "conditionals": {
