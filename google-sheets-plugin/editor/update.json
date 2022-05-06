@@ -21,7 +21,7 @@
           "controlType": "QUERY_DYNAMIC_TEXT",
           "evaluationSubstitutionType": "SMART_SUBSTITUTE",
           "conditionals": {
-            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.command.data === 'UPDATE_ONE'}}"
+            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_ONE'}}"
           },
           "placeholderText": "{{\n  { ...Table1.selectedRow, columnName: Input1.text }\n}}"
         },
@@ -33,7 +33,7 @@
           "controlType": "QUERY_DYNAMIC_TEXT",
           "evaluationSubstitutionType": "TEMPLATE",
           "conditionals": {
-            "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.command.data === 'UPDATE_ONE'}}"
+            "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_ONE'}}"
           },
           "placeholderText": "{{\n  { ...Table1.selectedRow, columnName: Input1.text }\n}}"
         },
@@ -45,7 +45,7 @@
           "controlType": "QUERY_DYNAMIC_TEXT",
           "evaluationSubstitutionType": "SMART_SUBSTITUTE",
           "conditionals": {
-            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.command.data === 'UPDATE_MANY'}}"
+            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_MANY'}}"
           },
           "placeholderText": "{{\n  Table1.selectedRows.map((row) => {\n    return { ...row, columnName: Input1.text }\n  })\n}}"
         },
@@ -57,7 +57,7 @@
           "controlType": "QUERY_DYNAMIC_TEXT",
           "evaluationSubstitutionType": "TEMPLATE",
           "conditionals": {
-            "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.command.data === 'UPDATE_MANY'}}"
+            "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_MANY'}}"
           },
           "placeholderText": "{{\n  Table1.selectedRows.map((row) => {\n    return { ...row, columnName: Input1.text }\n  })\n}}"
         }
