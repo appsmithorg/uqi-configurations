@@ -2,7 +2,7 @@
   "identifier": "FETCH_MANY",
   "controlType": "SECTION",
   "conditionals": {
-    "show": "{{actionConfiguration.formData.command.data === 'FETCH_MANY'}}"
+    "show": "{{!!actionConfiguration.formData.entityType.data && actionConfiguration.formData.command.data === 'FETCH_MANY'}}"
   },
   "children": [
     {
