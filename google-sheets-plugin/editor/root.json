@@ -57,6 +57,11 @@
           "initialValue": "ROWS",
           "options": [
             {
+              "disabled": "{{ ['FETCH_DETAILS', 'INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'UPDATE_MANY', 'INSERT_MANY'].includes(actionConfiguration.formData.command.data) === false }}",
+              "label": "Sheet Row(s)",
+              "value": "ROWS"
+            },
+            {
               "disabled": "{{ ['FETCH_MANY', 'FETCH_DETAILS', 'INSERT_ONE', 'DELETE_ONE'].includes(actionConfiguration.formData.command.data) === false }}",
               "label": "Spreadsheet",
               "value": "SPREADSHEET"
@@ -65,11 +70,6 @@
               "disabled": "{{ ['DELETE_ONE'].includes(actionConfiguration.formData.command.data) === false }}",
               "label": "Sheet",
               "value": "SHEET"
-            },
-            {
-              "disabled": "{{ ['FETCH_DETAILS', 'INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'UPDATE_MANY', 'INSERT_MANY'].includes(actionConfiguration.formData.command.data) === false }}",
-              "label": "Sheet Row(s)",
-              "value": "ROWS"
             }
           ],
           "conditionals": {
