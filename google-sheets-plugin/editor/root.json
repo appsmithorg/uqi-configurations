@@ -84,7 +84,7 @@
           "configProperty": "actionConfiguration.formData.selector.data",
           "controlType": "ENTITY_SELECTOR",
           "conditionals": {
-            "show": "{{ !!actionConfiguration.formData.entityType.data new Object({ 'SPREADSHEET': ['FETCH_DETAILS', 'DELETE_ONE'], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data)  }}"
+            "show": "{{ !!actionConfiguration.formData.entityType.data && new Object({ 'SPREADSHEET': ['FETCH_DETAILS', 'DELETE_ONE'], 'SHEET': ['DELETE_ONE'], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data)  }}"
           },
           "schema": [
             {
