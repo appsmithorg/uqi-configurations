@@ -93,6 +93,7 @@
               "propertyName": "rows_get_spreadsheetUrl",
               "configProperty": "actionConfiguration.formData.sheetUrl.data",
               "controlType": "DROP_DOWN",
+              "isSearchable": true,
               "-placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
               "fetchOptionsConditionally": true,
               "alternateViewTypes": ["json"],
@@ -114,6 +115,7 @@
               "tooltipText": "The name of the sheet inside the spreadsheet",
               "configProperty": "actionConfiguration.formData.sheetName.data",
               "controlType": "DROP_DOWN",
+              "isSearchable": true,
               "fetchOptionsConditionally": true,
               "alternateViewTypes": ["json"],
               "conditionals": {
