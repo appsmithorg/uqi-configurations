@@ -10,7 +10,7 @@
       "label": "Row Objects",
       "description": "",
       "conditionals": {
-        "show": "{{actionConfiguration.formData.entityType.data === 'ROWS'}}"
+        "show": "{{!!actionConfiguration.formData.sheetName.data && actionConfiguration.formData.entityType.data === 'ROWS'}}"
       },
       "children": [
         {
