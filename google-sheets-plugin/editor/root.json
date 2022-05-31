@@ -40,10 +40,6 @@
             {
               "label": "Update Many",
               "value": "UPDATE_MANY"
-            },
-            {
-              "label": "Delete Many",
-              "value": "DELETE_MANY"
             }
           ]
         },
