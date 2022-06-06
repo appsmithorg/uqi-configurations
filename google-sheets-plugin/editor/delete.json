@@ -11,6 +11,7 @@
       "propertyName": "rows_delete_rowIndex",
       "configProperty": "actionConfiguration.formData.rowIndex.data",
       "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
+      "isRequired": true,
       "placeholderText": "{{Table1.selectedRow.rowIndex}}"
     }
   ]
