@@ -12,6 +12,7 @@
           "configProperty": "actionConfiguration.formData.command.data",
           "controlType": "DROP_DOWN",
           "initialValue": "FETCH_MANY",
+          "isRequired": true,
           "options": [
             {
               "label": "Fetch Details",
@@ -51,6 +52,7 @@
           "configProperty": "actionConfiguration.formData.entityType.data",
           "controlType": "DROP_DOWN",
           "initialValue": "ROWS",
+          "isRequired": true,
           "options": [
             {
               "disabled": "{{ ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'UPDATE_MANY', 'INSERT_MANY'].includes(actionConfiguration.formData.command.data) === false }}",
@@ -90,6 +92,7 @@
               "configProperty": "actionConfiguration.formData.sheetUrl.data",
               "controlType": "DROP_DOWN",
               "isSearchable": true,
+              "isRequired": true,
               "-placeholderText": "https://docs.google.com/spreadsheets/d/xyz/edit#gid=0",
               "fetchOptionsConditionally": true,
               "alternateViewTypes": ["json"],
@@ -112,6 +115,7 @@
               "configProperty": "actionConfiguration.formData.sheetName.data",
               "controlType": "DROP_DOWN",
               "isSearchable": true,
+              "isRequired": true,
               "fetchOptionsConditionally": true,
               "alternateViewTypes": ["json"],
               "conditionals": {
@@ -137,6 +141,7 @@
               "configProperty": "actionConfiguration.formData.tableHeaderIndex.data",
               "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
               "initialValue": "1",
+              "isRequired": true,
               "conditionals": {
                 "show": "{{ new Object({ 'SPREADSHEET': [], 'SHEET': [], 'ROWS': ['INSERT_ONE', 'UPDATE_ONE', 'DELETE_ONE', 'FETCH_MANY', 'INSERT_MANY', 'UPDATE_MANY'] })[actionConfiguration.formData.entityType.data].includes(actionConfiguration.formData.command.data) && !!actionConfiguration.formData.sheetName.data }}"
               }
