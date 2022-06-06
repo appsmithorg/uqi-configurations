@@ -19,6 +19,7 @@
           "propertyName": "update_rowObjectWithSmartSubstitute",
           "configProperty": "actionConfiguration.formData.rowObjects.data",
           "controlType": "QUERY_DYNAMIC_TEXT",
+          "isRequired": true,
           "evaluationSubstitutionType": "SMART_SUBSTITUTE",
           "conditionals": {
             "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_ONE'}}"
@@ -31,6 +32,7 @@
           "propertyName": "update_rowObjectWithoutSmartSubstitute",
           "configProperty": "actionConfiguration.formData.rowObjects.data",
           "controlType": "QUERY_DYNAMIC_TEXT",
+          "isRequired": true,
           "evaluationSubstitutionType": "TEMPLATE",
           "conditionals": {
             "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_ONE'}}"
@@ -43,6 +45,7 @@
           "propertyName": "update_rowObjectsWithSmartSubstitute",
           "configProperty": "actionConfiguration.formData.rowObjects.data",
           "controlType": "QUERY_DYNAMIC_TEXT",
+          "isRequired": true,
           "evaluationSubstitutionType": "SMART_SUBSTITUTE",
           "conditionals": {
             "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_MANY'}}"
@@ -55,6 +58,7 @@
           "propertyName": "update_rowObjectsWithoutSmartSubstitute",
           "configProperty": "actionConfiguration.formData.rowObjects.data",
           "controlType": "QUERY_DYNAMIC_TEXT",
+          "isRequired": true,
           "evaluationSubstitutionType": "TEMPLATE",
           "conditionals": {
             "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'UPDATE_MANY'}}"
