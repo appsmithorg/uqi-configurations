@@ -107,6 +107,10 @@
               "value": "EQ"
             },
             {
+              "label": "!=",
+              "value": "NOT_EQ"
+            },
+            {
               "label": ">=",
               "value": "GTE"
             },
@@ -117,6 +121,10 @@
             {
               "label": "in",
               "value": "IN"
+            },
+            {
+              "label": "contains",
+              "value": "CONTAINS"
             },
             {
               "label": "not in",
