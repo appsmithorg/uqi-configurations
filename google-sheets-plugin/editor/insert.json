@@ -21,7 +21,7 @@
       "label": "Row Objects",
       "description": "",
       "conditionals": {
-        "show": "{{actionConfiguration.formData.entityType.data === 'ROWS'}}"
+        "show": "{{actionConfiguration.formData.entityType.data === 'ROWS' || actionConfiguration.formData.entityType.data === 'SPREADSHEET'}}"
       },
       "children": [
         {
@@ -56,7 +56,7 @@
           "controlType": "QUERY_DYNAMIC_TEXT",
           "evaluationSubstitutionType": "SMART_SUBSTITUTE",
           "conditionals": {
-            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'INSERT_MANY'}}"
+            "show": "{{actionConfiguration.formData.smartSubstitution.data === true && ((actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'INSERT_MANY') || (actionConfiguration.formData.entityType.data === 'SPREADSHEET' && actionConfiguration.formData.command.data === 'INSERT_ONE')}}"
           },
           "placeholderText": "[{\n  name: {{nameInput.text}},\n  dob: {{dobPicker.formattedDate}},\n  gender: {{genderSelect.selectedOptionValue}} }\n }]"
         },
@@ -68,7 +68,7 @@
           "controlType": "QUERY_DYNAMIC_TEXT",
           "evaluationSubstitutionType": "TEMPLATE",
           "conditionals": {
-            "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'INSERT_MANY'}}"
+            "show": "{{actionConfiguration.formData.smartSubstitution.data === false && ((actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'INSERT_MANY') || (actionConfiguration.formData.entityType.data === 'SPREADSHEET' && actionConfiguration.formData.command.data === 'INSERT_ONE')}}"
           },
           "placeholderText": "[{\n  name: {{nameInput.text}},\n  dob: {{dobPicker.formattedDate}},\n  gender: {{genderSelect.selectedOptionValue}} }\n }]"
         }
