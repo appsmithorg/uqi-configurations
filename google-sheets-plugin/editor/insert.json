@@ -11,6 +11,7 @@
       "propertyName": "file_create_spreadsheetName",
       "configProperty": "actionConfiguration.formData.spreadsheetName.data",
       "controlType": "QUERY_DYNAMIC_INPUT_TEXT",
+      "isRequired": true,
       "conditionals": {
         "show": "{{actionConfiguration.formData.entityType.data === 'SPREADSHEET'}}"
       },
@@ -30,6 +31,7 @@
           "propertyName": "create_rowObjectWithSmartSubstitute",
           "configProperty": "actionConfiguration.formData.rowObjects.data",
           "controlType": "QUERY_DYNAMIC_TEXT",
+          "isRequired": true,
           "evaluationSubstitutionType": "SMART_SUBSTITUTE",
           "conditionals": {
             "show": "{{actionConfiguration.formData.smartSubstitution.data === true && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'INSERT_ONE'}}"
@@ -42,6 +44,7 @@
           "propertyName": "create_rowObjectWithoutSmartSubstitute",
           "configProperty": "actionConfiguration.formData.rowObjects.data",
           "controlType": "QUERY_DYNAMIC_TEXT",
+          "isRequired": true,
           "evaluationSubstitutionType": "TEMPLATE",
           "conditionals": {
             "show": "{{actionConfiguration.formData.smartSubstitution.data === false && actionConfiguration.formData.entityType.data === 'ROWS' && actionConfiguration.formData.command.data === 'INSERT_ONE'}}"
